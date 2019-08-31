@@ -1,7 +1,6 @@
 from requests import get
 from pyquery import PyQuery as pq
 from pathlib import Path
-from datetime import datetime
 
 user_id = 'FLT'
 submission_list_url = 'https://atcoder.jp/contests/{}/submissions?f.User=' + user_id
