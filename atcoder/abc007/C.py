@@ -5,17 +5,19 @@ field = [input() for x in range(0, row)]
 queue = [(sy-1, sx-1)]
 memo = set([(sy-1, sx-1)])
 
+
 def get_children(y, x):
     result = []
-    if field[y][x+1]=='.' and (y, x+1) not in memo:
+    if field[y][x+1] == '.' and (y, x+1) not in memo:
         result.append((y, x+1))
-    if field[y][x-1]=='.' and (y, x-1) not in memo:
+    if field[y][x-1] == '.' and (y, x-1) not in memo:
         result.append((y, x-1))
-    if field[y+1][x]=='.' and (y+1, x) not in memo:
+    if field[y+1][x] == '.' and (y+1, x) not in memo:
         result.append((y+1, x))
-    if field[y-1][x]=='.' and (y-1, x) not in memo:
+    if field[y-1][x] == '.' and (y-1, x) not in memo:
         result.append((y-1, x))
     return result
+
 
 count = 0
 while queue and (gy-1, gx-1) not in queue:

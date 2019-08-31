@@ -9,4 +9,3 @@ for i in range(1, 10):
         break
 
 print('\n'.join(sorted(ret)))
-

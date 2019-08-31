@@ -12,4 +12,5 @@ def check(s, t):
             return False
     return True
 
+
 print('Yes' if check(s, t) and check(t, s) else 'No')

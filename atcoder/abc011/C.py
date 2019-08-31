@@ -1,14 +1,14 @@
 n = int(input())
 ng = sorted([int(input()), int(input()), int(input())], reverse=True)
 
-count=100
+count = 100
 
 if n in ng:
     print('NO')
     exit()
 
-while n>0:
-    if count==0:
+while n > 0:
+    if count == 0:
         print('NO')
         exit()
     elif n-3 not in ng:
@@ -20,6 +20,6 @@ while n>0:
     else:
         print('NO')
         exit()
-    count-=1
-    
+    count -= 1
+
 print('YES')

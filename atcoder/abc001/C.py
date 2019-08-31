@@ -1,7 +1,8 @@
 from itertools import takewhile
 deg, dis = [int(x) for x in input().split(' ')]
 
-directions = ['NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW']
+directions = ['NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE',
+              'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
 
 # 風程の境界値を取得
 # 有効桁数の境界値にする(+0.05)
@@ -12,7 +13,7 @@ beaufort_scale_boundary = [
 
 # 与えられた風程を、風力0の風程の境界値から比較していく
 # 境界値以上の値をx個発見したとき、風力xである
-w = len([x for x in takewhile(lambda y: dis>=y, beaufort_scale_boundary)])
+w = len([x for x in takewhile(lambda y: dis >= y, beaufort_scale_boundary)])
 
 if w == 0:
     dir = 'C'
@@ -23,7 +24,5 @@ else:
         if 1125+(2250*index) <= deg*10 < 1125+(2250*(index+1)):
             dir = directions[index]
             break
-    
+
 print(dir, w)
-
-

@@ -1,4 +1,4 @@
-n  = int(input())
+n = int(input())
 h = int(input())
 w = int(input())
 
